@@ -11,6 +11,18 @@ int main() {
     return 0;
 }
 int findLCM(int a, int b){
-    int lcm = 1;
-    
+    int lcm;
+    if(a > b){
+        lcm = a;
+    }else{
+        lcm = b;
+    }
+
+    while(1){
+        if(a%lcm == 0 && b%lcm == 0){
+            break;
+        }
+        lcm++;
+    }
+    return lcm;
 }
