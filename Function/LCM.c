@@ -7,7 +7,7 @@ int findLCM(int, int);
 int main() {
     int a, b;
     scanf("%d %d", &a, &b);
-    printf("The LCM is: %d", findLCM(a, b));
+    printf("%d", findLCM(a, b));
     return 0;
 }
 int findLCM(int a, int b){
@@ -20,6 +20,10 @@ int findLCM(int a, int b){
 
     while(1){
         if(a%lcm == 0 && b%lcm == 0){
+            break;
+        }
+        if(lcm == 2147483647){
+            printf("lcm is larger than %d\n", lcm);
             break;
         }
         lcm++;
