@@ -1,10 +1,15 @@
 #include<stdio.h>
-//checks if an input number is a palindrom
+//checks if an input number is a palindrom (1001 or 575)
 
 int findReverse(int);
 int main(){
     int number;
     scanf("%d", &number);
+    if(findReverse(number) == number){
+        printf("Its a Palindrome");
+    }else{
+        printf("Not a Palindrome");
+    }
 
     return 0;
 }
